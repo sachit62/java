@@ -1,47 +1,49 @@
 import java.util.*;
 
 public class stackLL {
-    static class Node{
+    static class Node {
         int data;
         Node next;
-        Node(int data){
+
+        Node(int data) {
             this.data = data;
-            this.next= null;
+            this.next = null;
         }
     }
-    static class Stack{
+
+    static class Stack {
         static Node head = null;
 
-        public static boolean isEmpty(){
-            return head==null;
+        public static boolean isEmpty() {
+            return head == null;
         }
 
-        // push 
-        public static void push(int data){
+        // push
+        public static void push(int data) {
             Node newNode = new Node(data);
 
-            if(isEmpty()){
+            if (isEmpty()) {
                 head = newNode;
                 return;
             }
 
-            newNode.next=head;
-            head=newNode;
+            newNode.next = head;
+            head = newNode;
         }
 
         // pop
-        public static int pop(){
-            if(isEmpty()){
+        public static int pop() {
+            if (isEmpty()) {
                 return -1;
             }
-            int top=head.data;
-            head=head.next;
+            int top = head.data;
+            head = head.next;
             return top;
         }
 
         // peek
-        public static int peek(){
-            if(isEmpty()){
+        public static int peek() {
+            if (isEmpty()) {
                 return -1;
             }
             return head.data;
@@ -54,7 +56,7 @@ public class stackLL {
         s.push(2);
         s.push(3);
 
-        while(!s.isEmpty()){
+        while (!s.isEmpty()) {
             System.out.println(s.peek());
             s.pop();
         }

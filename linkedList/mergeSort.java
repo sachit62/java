@@ -10,62 +10,84 @@ public class mergeSort {
         }
     }
 
-    private Node getMid(Node head) {
-        Node slow = head;
-        Node fast = head.next;
+    public static class LinkedList {
+        Node head;
 
-        while (fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
+        public void addFirst(int data) {
+            Node newNode = new Node(data);
+            newNode.next = head;
+            head = newNode;
         }
-        return slow; // mid node
-    }
 
-    private Node merge(Node head1, Node head2) {
-        Node mergeLL = new Node(-1);
-        Node temp = mergeLL;
+        public void print() {
+            Node temp = head;
+            while (temp != null) {
+                System.out.print(temp.data + " -> ");
+                temp = temp.next;
+            }
+            System.out.println("null");
+        }
 
-        while (head1 != null && head2 != null) {
-            if (head1.data <= head2.data) {
+        private Node getMid(Node head) {
+            Node slow = head;
+            Node fast = head.next;
+
+            while (fast != null && fast.next != null) {
+                slow = slow.next;
+                fast = fast.next.next;
+            }
+            return slow; // mid node
+        }
+
+        private Node merge(Node head1, Node head2) {
+            Node mergeLL = new Node(-1);
+            Node temp = mergeLL;
+
+            while (head1 != null && head2 != null) {
+                if (head1.data <= head2.data) {
+                    temp.next = head1;
+                    head1 = head1.next;
+                    temp = temp.next;
+                } else {
+                    temp.next = head2;
+                    head2 = head2.next;
+                    temp = temp.next;
+                }
+            }
+
+            while (head1 != null) {
                 temp.next = head1;
                 head1 = head1.next;
                 temp = temp.next;
-            } else {
+            }
+
+            while (head2 != null) {
                 temp.next = head2;
                 head2 = head2.next;
                 temp = temp.next;
             }
+
+            return mergeLL.next;
         }
 
-        while (head1 != null) {
-            temp.next = head1;
-            head1 = head1.next;
-            temp = temp.next;
+        public Node mergeSort(Node head) {
+            if (head == null || head.next == null) {
+                return head;
+            }
+
+            Node mid = getMid(head);
+            Node rightHead = mid.next;
+            mid.next = null;
+
+            Node newLeft = mergeSort(head);
+            Node newRight = mergeSort(rightHead);
+
+            return merge(newLeft, newRight);
         }
 
-        while (head2 != null) {
-            temp.next = head2;
-            head2 = head2.next;
-            temp = temp.next;
+        public void sort() {
+            head = mergeSort(head);
         }
-
-        return mergeLL.next;
-    }
-
-    public Node mergeSort(Node head) {
-        if (head == null || head.next == null) {
-            return head;
-        }
-        // find mid
-        Node mid = getMid();
-        // left & right MS
-        Node rightHead = mid.next;
-        mid.next = null;
-        Node newLeft = mergeSort(head);
-        Node newRight = mergeSort(rightHead);
-
-        // merge
-        return merge(newLeft, newRight);
     }
 
     public static void main(String[] args) {
@@ -76,8 +98,12 @@ public class mergeSort {
         ll.addFirst(4);
         ll.addFirst(5);
 
+        System.out.println("Before sorting:");
         ll.print();
-        ll.head = ll.mergeSort(ll.head);
+
+        ll.sort(); // sort using merge sort
+
+        System.out.println("After sorting:");
         ll.print();
     }
 }
