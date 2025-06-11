@@ -18,7 +18,7 @@ public class max_subarray_sum2 {
             for (int j = i; j < numbers.length; j++) {
                 int end = j;
 
-                currSum = start == 0 ? prefix[end] : prefix[end] - prefix[start];
+                currSum = start == 0 ? prefix[end] : prefix[end] - prefix[start-1];
 
                 if (maxSum < currSum) {
                     maxSum = currSum;
