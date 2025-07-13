@@ -8,7 +8,7 @@ public class decreasing{
             return;
         }
 
-        System.out.println(n+" ");
+        System.out.print(n+" ");
         printDecr(n-1);
     }
     public static void main(String[] args) {
