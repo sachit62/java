@@ -3,6 +3,13 @@ import java.io.*;
 
 public class Codechef {
     public static void main(String[] args) {
-        System.out.println(1);
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        while(t-- > 0){
+            int n = sc.nextInt();
+        }
     }
 }
+
+
+
