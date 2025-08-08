@@ -18,7 +18,7 @@ public class priorityQ {
     }
     public static void main(String[] args) {
         PriorityQueue<Integer> pq = new PriorityQueue<>();
-        pq.add(3);
+        pq.add(3); // peek 1 hoga min heap default rehta kyuki
         pq.add(4);
         pq.add(1);
         pq.add(7);
