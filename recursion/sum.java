@@ -1,4 +1,4 @@
-// sum of first n natural numbers
+// striver a2z playlist step1-lec5-sum of first n numbers
 
 public class sum {
 

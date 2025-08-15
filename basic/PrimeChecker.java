@@ -1,6 +1,7 @@
+// striver a2z playlist step1-lec4-check for prime
+
 public class PrimeChecker {
 
-    // Function to check if a number is prime
     public static boolean isPrime(int n) {
         if (n <= 1) return false;  // 0 and 1 are not prime numbers
         if (n == 2) return true;   // 2 is prime
@@ -16,7 +17,7 @@ public class PrimeChecker {
     }
 
     public static void main(String[] args) {
-        int num = 29;  // You can change this value to test other numbers
+        int num = 29; 
 
         if (isPrime(num)) {
             System.out.println(num + " is a prime number.");

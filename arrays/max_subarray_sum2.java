@@ -1,4 +1,6 @@
+// +ve and -ve mix
 // max subarray optimized   , TC - N^2
+// prefix sum approach
 
 public class max_subarray_sum2 {
 

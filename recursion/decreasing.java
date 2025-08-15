@@ -1,4 +1,4 @@
-// print n to 1 in decreasing order
+// striver a2z playlist step1-lec5-print n to 1
 
 public class decreasing{
 

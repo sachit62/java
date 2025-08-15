@@ -1,4 +1,5 @@
-// Unique class name as per your instruction
+// striver a2z playlist step1-lec4-countdigits
+
 public class DigitCounter {
 
     // Function to count number of digits in an integer

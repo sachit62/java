@@ -1,3 +1,5 @@
+// striver a2z playlist step1-lec5-reverse an array
+
 import java.util.Arrays;
 
 public class ReverseArrayRecursively {

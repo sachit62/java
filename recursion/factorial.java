@@ -1,4 +1,4 @@
-// O(n) TC and Sc
+// striver a2z playlist step1-lec5-factorial of first n numbers
 
 public class factorial {
 

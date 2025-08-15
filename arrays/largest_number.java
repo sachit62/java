@@ -1,4 +1,4 @@
-// largest number in array
+// striver a to z playlist step3-lec1-largest number
 
 import java.util.*;
 
