@@ -8,16 +8,29 @@ class Codechef {
         int t = sc.nextInt();
         while (t-- > 0) {
             int n = sc.nextInt();
-            int ans = n * n;
-            for(int i=0;i<n;i++){
-                for(int j=0;j<n;j++){
-                    System.out.print((i+j)%n);
-                    if(j<n-1){
-                        System.out.print(" ");
+            int a[] = new int[n];
+            for (int i = 0; i < n; i++) {
+                a[i] = sc.nextInt();
+            }
+            boolean odd1 = false;
+            boolean even1 = false;
+
+            for (int i = 0; i < n; i++) {
+                if (a[i] == 1) {
+                    if (i % 2 != 0) {
+                        odd1 = true;
+                    } else {
+                        even1 = true;
                     }
                 }
-                System.out.println();
             }
+
+            if (odd1 && even1) {
+                System.out.println("No");
+            } else {
+                System.out.println("Yes");
+            }
+        }
             
         }
     }
