@@ -9,27 +9,26 @@ class Codechef {
         while (t-- > 0) {
             int n = sc.nextInt();
             String s = sc.next();
-            int flag = true;
-            int count =1;
-            int maxCount = 0;
-            for (int i = 0; i < s.length(); i++) {
-                if (i<s.length()-1 && s.charAt(i) == '1') {
-                    for(int j=i+1;j<s.length();j++){
-                        if(s.charAt(j)=='1'){
-                            count++;
-                            maxCount = Math.max(maxCount, count);
-                        } else{
-                            count = 1;
-                        }
-                    }
+            int count0=0;
+            int count1=0;
+            for(int i=0;i<s.length();i++){
+                if(s.charAt(i)=='0'){
+                    count0++;
+                } else{
+                    count1++;
                 }
             }
-            if ((maxCount==2 || maxCount==3) ) {
-                System.out.println("no");
-
-            }else{
-                System.out.println("yes");
+            if(count1>=count0){
+                System.out.println(0);
+                continue;
             }
+            int count=0;
+            while(count0>count1){
+                count0--;
+                count1++;
+                count++;
+            }
+            System.out.println(count);
         }
     }
 }
