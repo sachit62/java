@@ -1,4 +1,4 @@
-// wehn only 1 satisfied condition answer has to be returned
+// when only 1 satisfied condition answer has to be returned
 
 import java.util.*;
 
