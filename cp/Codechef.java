@@ -8,27 +8,31 @@ class Codechef {
         int t = sc.nextInt();
         while (t-- > 0) {
             int n = sc.nextInt();
+            int k = sc.nextInt();
             String s = sc.next();
-            int count0=0;
-            int count1=0;
-            for(int i=0;i<s.length();i++){
-                if(s.charAt(i)=='0'){
-                    count0++;
-                } else{
+            boolean flag = true;
+            int count1 = 0;
+            int count0 = 0;
+            for(int i=0;i<n;i++){
+                if(s.charAt(i)=='1'){
                     count1++;
+                }else {
+                    count0++;
                 }
             }
-            if(count1>=count0){
-                System.out.println(0);
-                continue;
+            int grps = n/k;
+            int min1 = 0;
+            int max1 = 0;
+            for(int i=0;i<n;i++){
+                int grpSize = ((n-i-1)/k)+1;
+                min1 += grpSize/2;
+                max1 += (grpSize+1)/2;
             }
-            int count=0;
-            while(count0>count1){
-                count0--;
-                count1++;
-                count++;
+            if(count1>=min1 && count1<=max1){
+                System.out.println("yes");
+            } else{
+                System.out.println("no");
             }
-            System.out.println(count);
         }
     }
 }
