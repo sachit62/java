@@ -1,134 +1,177 @@
-# DSA Patterns – Complete Guide
+# How to Solve DSA Questions – A Structured Approach
 
-This document summarizes the core problem-solving patterns used in Data Structures & Algorithms. Each pattern includes a clear explanation and typical use-cases to help you recognize when to apply it.
+This guide defines a **clear, repeatable process** to solve Data Structures & Algorithms problems effectively, along with a **complete list of core DSA patterns** to recognize problems faster.
 
 ---
 
-## 1. Prefix Sum
+## 📌 Problem-Solving Workflow
 
-Used for cumulative operations on arrays where repeated range queries are needed.
+Follow these steps **for every DSA question**:
 
-Common Use-Cases:
+1. **Analyze the problem**
+   - Understand constraints
+   - Identify the input/output format
+   - Decide which **DSA + pattern** fits
+
+2. **Plan before coding**
+   - Think about time & space complexity
+   - Dry run with sample input
+
+3. **Implement the solution**
+   - Write clean, readable code
+   - Handle edge cases
+
+4. **If stuck**
+   - Give yourself sufficient time
+   - Then refer to the solution
+   - Understand what you missed
+   - **Re-code the solution yourself**
+
+5. **Post-solution**
+   - Add the problem to your **revision list**
+   - Note any **new concept / trick / pattern**
+
+---
+
+# 🧠 DSA Patterns – Complete Guide
+
+This section summarizes **core problem-solving patterns** in DSA.  
+Each pattern includes **when to use it** and **common problem types**.
+
+---
+
+## 1️⃣ Prefix Sum
+
+Used for cumulative calculations when multiple range queries are involved.
+
+**Common Use-Cases**
 - Range sum queries
 - Subarray sum equals K
-- Frequency difference arrays
+- Difference arrays
+- Frequency tracking
 
 ---
 
-## 2. Two Pointers
+## 2️⃣ Two Pointers
 
-Used when traversing arrays/strings from both ends or comparing elements efficiently.
+Efficient traversal using two indices moving toward or away from each other.
 
-Common Use-Cases:
+**Common Use-Cases**
 - Pair sum in sorted arrays
 - Palindrome checking
-- Shrinking/sliding range problems
+- Removing duplicates
+- Comparing ranges
 
 ---
 
-## 3. Sliding Window
+## 3️⃣ Sliding Window
 
-Used for subarray/substring problems requiring continuous segments (fixed or variable length).
+Used for problems involving **continuous subarrays/substrings**.
 
-Benefits: Reduces O(n²) → O(n)
+**Why use it?**
+- Reduces time complexity from `O(n²)` → `O(n)`
 
-Common Use-Cases:
+**Common Use-Cases**
 - Longest substring without repeating characters
 - Max sum subarray of size K
 - Variable window problems
 
 ---
 
-## 4. Fast and Slow Pointer
+## 4️⃣ Fast & Slow Pointer
 
-Used when relative movement between pointers helps detect states.
+Pointers move at different speeds to detect cycles or midpoints.
 
-Common Use-Cases:
+**Common Use-Cases**
 - Linked list cycle detection
-- Finding middle element
-- Linked list intersection
+- Finding middle of a linked list
+- Detecting intersections
 
 ---
 
-## 5. Three Pointers
+## 5️⃣ Three Pointers
 
-When three running indices help maintain order or partitions.
+Maintains order or partitions using three indices.
 
-Common Use-Cases:
+**Common Use-Cases**
 - Dutch National Flag problem
 - Merge sorted arrays
 - In-place rearrangements
 
 ---
 
-## 6. Monotonic Stack
+## 6️⃣ Monotonic Stack
 
-Stack maintained in increasing or decreasing order for efficient nearest element queries.
+Stack maintained in **increasing or decreasing order**.
 
-Common Use-Cases:
-- Next greater/smaller element
+**Common Use-Cases**
+- Next greater / smaller element
 - Stock span problem
 - Largest rectangle in histogram
 
 ---
 
-## 7. Top-K Elements
+## 7️⃣ Top-K Elements
 
-Useful for selecting top-k largest/smallest elements efficiently.
+Used when finding **k largest/smallest** elements.
 
-Common Tools: Heaps, Priority Queue, Quickselect
+**Common Tools**
+- Heap (Priority Queue)
+- Quickselect
 
-Common Use-Cases:
-- K largest or smallest elements
+**Common Use-Cases**
+- K largest / smallest elements
 - K frequent elements
-- Ranking and streaming data
+- Streaming data problems
 
 ---
 
-## 8. Overlapping Interval
+## 8️⃣ Overlapping Intervals
 
-Involves combining or comparing time/space intervals.
+Problems involving time or range overlaps.
 
-Common Use-Cases:
+**Common Use-Cases**
 - Merge intervals
-- Meeting room scheduling
-- Conflict/overlap detection
+- Meeting rooms
+- Conflict detection
+- Scheduling problems
 
 ---
 
-## 9. Modified Binary Search
+## 9️⃣ Modified Binary Search
 
-Used on arrays with special structure or monotonic property.
+Binary search on **non-traditional sorted data**.
 
-Common Use-Cases:
+**Common Use-Cases**
 - Search in rotated sorted array
-- First/last occurrences
+- First/last occurrence
 - Peak element
-- Monotonic conditions
+- Monotonic condition problems
 
 ---
 
-## 10. Binary Tree Traversal
+## 🔟 Binary Tree Traversal
 
-Standard tree traversal techniques.
+Standard traversal techniques for trees.
 
-Types:
+**Types**
 - Inorder
 - Preorder
 - Postorder
-- Level order (BFS)
+- Level Order (BFS)
 
-Common Use-Cases:
+**Common Use-Cases**
 - BST operations
-- Expression tree parsing
+- Expression trees
+- Tree validation
 
 ---
 
-## 11. DFS (Depth-First Search)
+## 1️⃣1️⃣ DFS (Depth-First Search)
 
 Explores deeply before backtracking.
 
-Common Use-Cases:
+**Common Use-Cases**
 - Connected components
 - Cycle detection
 - Islands problems
@@ -136,35 +179,36 @@ Common Use-Cases:
 
 ---
 
-## 12. BFS (Breadth-First Search)
+## 1️⃣2️⃣ BFS (Breadth-First Search)
 
-Explores nodes level by level.
+Explores level by level.
 
-Common Use-Cases:
-- Shortest path in unweighted graphs
+**Common Use-Cases**
+- Shortest path (unweighted graphs)
 - Multi-source BFS
 - Level-order traversal
 
 ---
 
-## 13. Matrix Traversal
+## 1️⃣3️⃣ Matrix Traversal
 
-Grid-based traversal techniques.
+Traversal techniques for 2D grids.
 
-Common Use-Cases:
+**Common Use-Cases**
 - Flood fill
 - Spiral matrix
-- DP tabulation
-- Islands in 2D grid
+- Grid-based DP
+- Island counting
 
 ---
 
-## 14. Backtracking
+## 1️⃣4️⃣ Backtracking
 
-Used to explore all possibilities with pruning.
-When all combinations or permutations are there think of backtracking.
+Used when **all combinations or permutations** are required.
 
-Common Use-Cases:
+> If the problem says *“find all possible”* → think **Backtracking**
+
+**Common Use-Cases**
 - Subsets
 - Permutations
 - N-Queens
@@ -172,11 +216,13 @@ Common Use-Cases:
 
 ---
 
-## 15. Dynamic Programming
+## 1️⃣5️⃣ Dynamic Programming (DP)
 
-Used for problems with overlapping subproblems and optimal substructure.
+Used when problems have:
+- Overlapping subproblems
+- Optimal substructure
 
-Common Use-Cases:
+**Common Use-Cases**
 - Knapsack
 - LIS
 - Matrix DP
@@ -184,27 +230,26 @@ Common Use-Cases:
 
 ---
 
-## 16. Union Find (Disjoint Set Union)
+## 1️⃣6️⃣ Union Find (Disjoint Set Union)
 
-Efficient for merging sets and checking connectivity.
+Efficient for merging sets and connectivity checks.
 
-Common Use-Cases:
+**Common Use-Cases**
 - Connected components
 - Cycle detection
 - Kruskal’s MST
-- Accounts merging
+- Account merging
 
 ---
 
-## 17. Greedy
+## 1️⃣7️⃣ Greedy Algorithms
 
-Used when local optimal choices lead to the global best solution.
+Make locally optimal choices hoping for a global optimum.
 
-Common Use-Cases:
+**Common Use-Cases**
 - Activity selection
 - Jump Game
 - Minimum platforms
 - Huffman coding
 
 ---
-
