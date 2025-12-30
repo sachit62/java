@@ -1,255 +1,411 @@
-# How to Solve DSA Questions – A Structured Approach
+# 🧠 DSA Problem-Solving Guide & Patterns
 
-This guide defines a **clear, repeatable process** to solve Data Structures & Algorithms problems effectively, along with a **complete list of core DSA patterns** to recognize problems faster.
+A structured approach to solving Data Structures & Algorithms problems with a complete list of commonly used patterns.
 
 ---
 
 ## 📌 Problem-Solving Workflow
 
-Follow these steps **for every DSA question**:
+Follow these steps for **every DSA problem**:
 
-1. **Analyze the problem**
+1. Analyze the problem
    - Understand constraints
-   - Identify the input/output format
-   - Decide which **DSA + pattern** fits
+   - Identify input/output
+   - Decide the DSA + pattern
 
-2. **Plan before coding**
-   - Think about time & space complexity
-   - Dry run with sample input
+2. Plan before coding
+   - Time & space complexity
+   - Dry run on examples
 
-3. **Implement the solution**
-   - Write clean, readable code
+3. Implement
+   - Clean, readable code
    - Handle edge cases
 
-4. **If stuck**
-   - Give yourself sufficient time
-   - Then refer to the solution
-   - Understand what you missed
-   - **Re-code the solution yourself**
+4. If stuck
+   - Give sufficient time
+   - Read solution
+   - Understand mistake
+   - Re-code yourself
 
-5. **Post-solution**
-   - Add the problem to your **revision list**
-   - Note any **new concept / trick / pattern**
-
----
-
-# 🧠 DSA Patterns – Complete Guide
-
-This section summarizes **core problem-solving patterns** in DSA.  
-Each pattern includes **when to use it** and **common problem types**.
+5. Post-solution
+   - Add to revision list
+   - Note new pattern or trick
 
 ---
 
-## 1️⃣ Prefix Sum
+# 🧠 DSA Patterns – Complete List
 
-Used for cumulative calculations when multiple range queries are involved.
+---
 
-**Common Use-Cases**
-- Range sum queries
-- Subarray sum equals K
-- Difference arrays
-- Frequency tracking
+## 1️⃣ Prefix / Suffix Techniques
+
+**Use when:**
+- Repeated range queries
+- Cumulative calculations
+
+**Sub-Patterns:**
+- Prefix Sum
+- Suffix Sum
+- Difference Array
+- Prefix XOR
+- Prefix Min / Max
+
+**Common Problems:**
+- Subarray sum = K
+- Range queries
+- Frequency arrays
 
 ---
 
 ## 2️⃣ Two Pointers
 
-Efficient traversal using two indices moving toward or away from each other.
+**Use when:**
+- Traversing from both ends
+- Comparing pairs efficiently
 
-**Common Use-Cases**
-- Pair sum in sorted arrays
-- Palindrome checking
-- Removing duplicates
-- Comparing ranges
+**Sub-Patterns:**
+- Opposite direction
+- Same direction
+- Fast & Slow pointers
+- Partitioning arrays
+
+**Common Problems:**
+- Two Sum (sorted)
+- Palindrome
+- Remove duplicates
+- Cycle detection
 
 ---
 
 ## 3️⃣ Sliding Window
 
-Used for problems involving **continuous subarrays/substrings**.
+**Use when:**
+- Continuous subarray / substring problems
 
-**Why use it?**
-- Reduces time complexity from `O(n²)` → `O(n)`
+**Sub-Patterns:**
+- Fixed window
+- Variable window
+- Min / Max window
+- K distinct constraints
 
-**Common Use-Cases**
-- Longest substring without repeating characters
+**Common Problems:**
+- Longest substring
 - Max sum subarray of size K
-- Variable window problems
 
 ---
 
-## 4️⃣ Fast & Slow Pointer
+## 4️⃣ Heaps / Priority Queue
 
-Pointers move at different speeds to detect cycles or midpoints.
+**Use when:**
+- Order or priority matters
 
-**Common Use-Cases**
-- Linked list cycle detection
-- Finding middle of a linked list
-- Detecting intersections
+**Sub-Patterns:**
+- Min Heap
+- Max Heap
+- Two Heaps
+- Sliding Window Heap
+
+**Common Problems:**
+- Kth largest/smallest
+- Median from stream
+- Scheduling
 
 ---
 
-## 5️⃣ Three Pointers
+## 5️⃣ Linked List
 
-Maintains order or partitions using three indices.
+**Use when:**
+- Pointer manipulation
 
-**Common Use-Cases**
-- Dutch National Flag problem
-- Merge sorted arrays
+**Sub-Patterns:**
+- Reverse list
+- Cycle detection
+- Merge lists
+- Intersection
+- Palindrome list
+
+---
+
+## 6️⃣ Three Pointers
+
+**Use when:**
+- Partitioning into 3 sections
+
+**Common Problems:**
+- Dutch National Flag
 - In-place rearrangements
 
 ---
 
-## 6️⃣ Monotonic Stack
+## 7️⃣ Monotonic Stack
 
-Stack maintained in **increasing or decreasing order**.
+**Use when:**
+- Next/Previous greater/smaller needed
 
-**Common Use-Cases**
-- Next greater / smaller element
-- Stock span problem
-- Largest rectangle in histogram
+**Sub-Patterns:**
+- Next Greater Element
+- Previous Smaller Element
+
+**Common Problems:**
+- Stock span
+- Histogram area
+- Remove K digits
 
 ---
 
-## 7️⃣ Top-K Elements
+## 8️⃣ Top-K Elements
 
-Used when finding **k largest/smallest** elements.
+**Use when:**
+- Finding extreme K elements
 
-**Common Tools**
-- Heap (Priority Queue)
+**Tools:**
+- Heap
 - Quickselect
 
-**Common Use-Cases**
-- K largest / smallest elements
+**Common Problems:**
 - K frequent elements
-- Streaming data problems
+- K closest points
 
 ---
 
-## 8️⃣ Overlapping Intervals
+## 9️⃣ Hashing / Sets / Maps
 
-Problems involving time or range overlaps.
+**Use when:**
+- Constant-time lookup required
 
-**Common Use-Cases**
-- Merge intervals
-- Meeting rooms
-- Conflict detection
-- Scheduling problems
+**Sub-Patterns:**
+- Frequency map
+- HashSet existence
+- Sorting + hashing
+
+**Common Problems:**
+- Two Sum
+- Anagrams
+- Longest consecutive sequence
 
 ---
 
-## 9️⃣ Modified Binary Search
+## 🔟 Overlapping Intervals
 
-Binary search on **non-traditional sorted data**.
+**Use when:**
+- Working directly with intervals
 
-**Common Use-Cases**
-- Search in rotated sorted array
-- First/last occurrence
+**Core Idea:**
+- Sort by start
+- Compare adjacent intervals
+
+**Common Problems:**
+- Merge Intervals
+- Insert Interval
+- Meeting Rooms I
+- Minimum Platforms
+
+---
+
+## 1️⃣1️⃣ Binary Search
+
+**Use when:**
+- Monotonic condition exists
+
+**Sub-Patterns:**
+- Binary search on answer
+- Rotated arrays
+- First / last occurrence
+
+**Common Problems:**
 - Peak element
-- Monotonic condition problems
+- Search in rotated array
 
 ---
 
-## 🔟 Binary Tree Traversal
+## 1️⃣2️⃣ Tree Traversal
 
-Standard traversal techniques for trees.
-
-**Types**
+**Types:**
 - Inorder
 - Preorder
 - Postorder
-- Level Order (BFS)
+- Level Order
 
-**Common Use-Cases**
-- BST operations
-- Expression trees
-- Tree validation
+**Common Problems:**
+- BST validation
+- Path problems
 
 ---
 
-## 1️⃣1️⃣ DFS (Depth-First Search)
+## 1️⃣3️⃣ DFS (Depth-First Search)
 
-Explores deeply before backtracking.
+**Use when:**
+- Explore deeply before backtracking
 
-**Common Use-Cases**
+**Common Problems:**
 - Connected components
 - Cycle detection
-- Islands problems
-- Pathfinding
+- Islands
 
 ---
 
-## 1️⃣2️⃣ BFS (Breadth-First Search)
+## 1️⃣4️⃣ BFS (Breadth-First Search)
 
-Explores level by level.
+**Use when:**
+- Level-wise traversal
+- Shortest path (unweighted)
 
-**Common Use-Cases**
-- Shortest path (unweighted graphs)
+**Common Problems:**
+- Level order traversal
 - Multi-source BFS
-- Level-order traversal
 
 ---
 
-## 1️⃣3️⃣ Matrix Traversal
+## 1️⃣5️⃣ Matrix Traversal
 
-Traversal techniques for 2D grids.
+**Use when:**
+- Grid-based problems
 
-**Common Use-Cases**
+**Common Problems:**
 - Flood fill
+- Island count
 - Spiral matrix
-- Grid-based DP
-- Island counting
 
 ---
 
-## 1️⃣4️⃣ Backtracking
+## 1️⃣6️⃣ Recursion / Backtracking
 
-Used when **all combinations or permutations** are required.
+**Use when:**
+- All combinations / permutations required
 
-> If the problem says *“find all possible”* → think **Backtracking**
-
-**Common Use-Cases**
+**Sub-Patterns:**
 - Subsets
 - Permutations
+- Combination Sum
 - N-Queens
-- Sudoku solver
+- Sudoku
 
 ---
 
-## 1️⃣5️⃣ Dynamic Programming (DP)
+## 1️⃣7️⃣ Dynamic Programming (DP)
 
-Used when problems have:
+**Use when:**
 - Overlapping subproblems
 - Optimal substructure
 
-**Common Use-Cases**
-- Knapsack
-- LIS
-- Matrix DP
-- DP on trees
+**Types:**
+- 1D DP
+- 2D DP
+- Grid DP
+- Tree DP
 
 ---
 
-## 1️⃣6️⃣ Union Find (Disjoint Set Union)
+## 1️⃣8️⃣ Union Find (DSU)
 
-Efficient for merging sets and connectivity checks.
+**Use when:**
+- Connectivity or grouping
 
-**Common Use-Cases**
-- Connected components
+**Common Problems:**
 - Cycle detection
-- Kruskal’s MST
+- Kruskal MST
 - Account merging
 
 ---
 
-## 1️⃣7️⃣ Greedy Algorithms
+## 1️⃣9️⃣ Greedy Algorithms
 
-Make locally optimal choices hoping for a global optimum.
+**Use when:**
+- Local optimal leads to global optimal
 
-**Common Use-Cases**
+**Common Problems:**
 - Activity selection
 - Jump Game
-- Minimum platforms
 - Huffman coding
+
+---
+
+## 2️⃣0️⃣ Bit Manipulation
+
+**Use when:**
+- Binary properties involved
+
+**Common Problems:**
+- Single number
+- XOR tricks
+- Power of two
+- Subsets via bitmask
+
+---
+
+## 2️⃣1️⃣ Trie (Prefix Tree)
+
+**Use when:**
+- Prefix-based searching
+
+**Common Problems:**
+- Autocomplete
+- Word search
+- Dictionary problems
+
+---
+
+## 2️⃣2️⃣ Segment Tree / Fenwick Tree
+
+**Use when:**
+- Range query & updates
+
+**Common Problems:**
+- Range sum
+- Range minimum query
+
+---
+
+## 2️⃣3️⃣ Graph Algorithms
+
+**Use when:**
+- Nodes and edges involved
+
+**Common Problems:**
+- Dijkstra
+- Topological Sort
+- Kruskal / Prim
+- Bellman-Ford
+
+---
+
+## 2️⃣4️⃣ String Algorithms
+
+**Use when:**
+- Pattern matching required
+
+**Common Problems:**
+- KMP
+- Z-algorithm
+- Rabin-Karp
+
+---
+
+## 2️⃣5️⃣ Math / Number Theory
+
+**Use when:**
+- Mathematical properties needed
+
+**Common Problems:**
+- GCD / LCM
+- Sieve
+- Modular arithmetic
+
+---
+
+## 2️⃣6️⃣ Sweep Line Technique
+
+**Use when:**
+- Timeline or event-based changes
+
+**Core Idea:**
+- Start → +1
+- End → -1
+- Track active count
+
+**Common Problems:**
+- Meeting Rooms II
+- Maximum overlap
+- Skyline problem
 
 ---
