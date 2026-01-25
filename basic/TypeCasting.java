@@ -12,5 +12,10 @@ public class TypeCasting {
         char ch = 'a';
         int number = ch;
         System.out.println(number); // ascii of 'a' will print
+
+        // when range limit is exceeded
+        byte b = 12;
+        int a = 257;
+        System.out.println((byte) a); // 257 % 256(range) = 1
     }
 }

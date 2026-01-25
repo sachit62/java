@@ -1,68 +1,26 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
 
-        int t = sc.nextInt();
-        while (t-- > 0) {
-            int n = sc.nextInt();
-            int[] a = new int[n];
+        int tc = sc.nextInt();
 
-            ArrayList<Integer> odds = new ArrayList<>();
-            ArrayList<Integer> evens = new ArrayList<>();
+        while (tc-- > 0) {
 
-            boolean hasOdd = false;
-            boolean hasEven = false;
+            int n = sc.nextInt();     
+            int m = sc.nextInt(); 
+            long h = sc.nextLong();  
 
-            for (int i = 0; i < n; i++) {
-                a[i] = sc.nextInt();
-                if (a[i] % 2 == 0) {
-                    evens.add(a[i]);
-                    hasEven = true;
-                } else {
-                    odds.add(a[i]);
-                    hasOdd = true;
-                }
+            long[] a = new long[n + 1];
+            for (int i = 1; i <= n; i++) {
+                a[i] = sc.nextLong();
             }
 
-            if (!hasOdd || !hasEven) {
-                for (int i = 0; i < n; i++) {
-                    System.out.print(a[i] + " ");
-                }
-                System.out.println();
-                continue;
-            }
-
-            Collections.sort(odds);
-            Collections.sort(evens);
-
-            ArrayList<Integer> result = new ArrayList<>();
-            int o = 0;
-            int e = 0;
-
-            while (o < odds.size() && e < evens.size()) {
-                if (odds.get(o) < evens.get(e)) {
-                    result.add(odds.get(o));
-                    o++;
-                } else {
-                    result.add(evens.get(e));
-                    e++;
-                }
-            }
-
-            while (o < odds.size()) {
-                result.add(odds.get(o++));
-            }
-            while (e < evens.size()) {
-                result.add(evens.get(e++));
-            }
-
-            for (int i = 0; i < n; i++) {
-                System.out.print(result.get(i) + " ");
-            }
-            System.out.println();
+            
         }
+
         sc.close();
     }
 }
