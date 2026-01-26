@@ -6,7 +6,7 @@ class ADD{
     }
 }
 
-public class createObject {
+public class a_createObject {
     public static void main(String[] args) {
         ADD ans = new ADD(); // object created of ADD
 
