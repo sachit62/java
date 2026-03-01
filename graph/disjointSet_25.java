@@ -51,6 +51,66 @@ class DisjointSet {
         }
     }
 }
+// using arrays
+// class DisjointSet {
+
+//     private int[] parent;
+//     private int[] rank;
+//     private int[] size;
+
+//     public DisjointSet(int n) {
+//         parent = new int[n + 1];
+//         rank = new int[n + 1];
+//         size = new int[n + 1];
+
+//         for (int i = 0; i <= n; i++) {
+//             parent[i] = i;
+//             rank[i] = 0;
+//             size[i] = 1;
+//         }
+//     }
+
+//     // Path Compression
+//     public int findUPar(int node) {
+//         if (parent[node] != node) {
+//             parent[node] = findUPar(parent[node]);
+//         }
+//         return parent[node];
+//     }
+
+//     // Union by Rank
+//     public void unionByRank(int u, int v) {
+//         int pu = findUPar(u);
+//         int pv = findUPar(v);
+
+//         if (pu == pv) return;
+
+//         if (rank[pu] < rank[pv]) {
+//             parent[pu] = pv;
+//         } else if (rank[pv] < rank[pu]) {
+//             parent[pv] = pu;
+//         } else {
+//             parent[pv] = pu;
+//             rank[pu]++;
+//         }
+//     }
+
+//     // Union by Size
+//     public void unionBySize(int u, int v) {
+//         int pu = findUPar(u);
+//         int pv = findUPar(v);
+
+//         if (pu == pv) return;
+
+//         if (size[pu] < size[pv]) {
+//             parent[pu] = pv;
+//             size[pv] += size[pu];
+//         } else {
+//             parent[pv] = pu;
+//             size[pu] += size[pv];
+//         }
+//     }
+// }
 
 public class disjointSet_25 {
     public static void main (String[] args) {
