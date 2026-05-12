@@ -1,6 +1,6 @@
 // linear search implementation
 
-public class linear_search {
+public class linear_search_3 {
     public static int linearSearch(int numbers[], int key) {
         for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] == key) {

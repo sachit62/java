@@ -1,42 +1,38 @@
-
-class A
-{
-    // Constructor → runs when object is created
-    public A()
-    {
+class A {
+    // Constructor → runs automatically when object is created
+    public A() {
         System.out.println("object created");
     }
 
     // Method of class A
-    public void show()
-    {
+    public void show() {
         System.out.println("in A show");
     }
 }
 
-public class f_anonymousObject
-{
-    public static void main(String a[])
-    {
-        // Normal variable
+public class f_anonymousObject {
+    public static void main(String a[]) {
+        // Normal variable declaration
         int marks;
         marks = 99;
 
         // ---------------- ANONYMOUS OBJECT ----------------
-        // Object is created but no reference variable is stored
-        new A();            // constructor is called, object is lost after this line
 
-        new A().show();     // anonymous object + method call
-                            // object created → show() called → object destroyed
+        // Object created without storing reference
+        new A();
+
+        // Anonymous object with method call
+        new A().show();
 
         // ---------------- NORMAL OBJECT ----------------
-        // Object reference declared
+
+        // Reference variable declaration
         A obj;
 
-        // Object created and assigned to reference variable
-        obj = new A();      // constructor runs here
+        // Object creation and reference assignment
+        obj = new A();
 
-        // Method call using reference
+        // Method call using reference variable
         obj.show();
     }
 }

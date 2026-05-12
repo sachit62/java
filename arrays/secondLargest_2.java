@@ -1,7 +1,7 @@
 // striver a to z playlist step3-lec1-2nd largest number
 // O(n)
 
-public class secondLargest {
+public class secondLargest_2 {
     public static void main(String[] args) {
         int arr[] = {3,1,2,7,5};
         int largest = arr[0];

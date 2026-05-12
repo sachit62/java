@@ -1,6 +1,6 @@
 // striver a2z playlist step1-lec4-print all divisors
 
-public class divisors {
+public class divisors_4 {
     public static void main(String[] args) {
         int n = 20;
 

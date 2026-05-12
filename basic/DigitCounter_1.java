@@ -1,6 +1,5 @@
-// striver a2z playlist step1-lec4-countdigits
 
-public class DigitCounter {
+public class DigitCounter_1 {
 
     // Function to count number of digits in an integer
     public int countDigits(int n) {
@@ -16,7 +15,7 @@ public class DigitCounter {
 
     // Main method to test
     public static void main(String[] args) {
-        DigitCounter dc = new DigitCounter();
+        DigitCounter_1 dc = new DigitCounter_1();
         int number = 123456;
         System.out.println("Number of digits in " + number + " is: " + dc.countDigits(number));
     }

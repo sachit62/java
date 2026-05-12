@@ -1,6 +1,6 @@
 // striver a2z playlist step1-lec4-armstrong
 
-public class ArmstrongChecker {
+public class ArmstrongChecker_3 {
 
     // Check if a number is an Armstrong number of n digits
     static boolean isArmstrong(int n) {
